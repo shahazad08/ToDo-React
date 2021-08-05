@@ -7,6 +7,7 @@ const Form = ({setInputText, todos, setTodos, inputText}) => {
     }
 
     const submitToHandler=(e)=> {
+      console.log("Submit Button CLick",todos)
         e.preventDefault();
         setTodos([
             ...todos,
