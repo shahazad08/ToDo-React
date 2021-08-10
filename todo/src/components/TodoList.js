@@ -6,7 +6,12 @@ const TodoList = ({todos, setTodos}) => {
     <div className="todo-container">
       <ul className="todo-list">
           {todos.map((todo) => (
-        <Todo key={todo.id} text={todo.text} setTodos={setTodos} todos={todos} todo={todo}/> 
+        <Todo 
+        key={todo.id} 
+        text={todo.text} 
+        setTodos={setTodos} 
+        todos={todos} 
+        todo={todo}/> 
           ))}
          
       </ul>
