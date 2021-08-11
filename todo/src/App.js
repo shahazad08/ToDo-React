@@ -40,7 +40,7 @@ function App() {
        setStatus={setStatus}
        />
        <TodoList 
-       todos={todos} setTodos={setTodos}/>
+       todos={todos} setTodos={setTodos} filterTodos={filteredTodos}/>
     </div>
   );
 }
