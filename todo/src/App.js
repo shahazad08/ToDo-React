@@ -39,7 +39,6 @@ function App() {
        status={status}
        setStatus={setStatus}
        />
-       
        <TodoList 
        todos={todos} setTodos={setTodos}/>
     </div>
