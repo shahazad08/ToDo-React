@@ -23,9 +23,28 @@ function App() {
     }
   }
   useEffect(()=> {
+    getLocalStorage();
+  }, [])
+  useEffect(()=> {
     console.log("Hey")
     filterHandler();
+    saveToLocalStorage();
   }, [todos, status])
+
+  const saveToLocalStorage=()=> {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }
+
+  const getLocalStorage=()=> {
+    if(localStorage.getItem("todos")===null) {
+      localStorage.setItem("todos",JSON.stringify([]));
+    }
+    else {
+      let localTodo=JSON.parse(localStorage.getItem("todos"));
+      setTodos(localTodo)
+  
+    }
+  }
   return (
     <div className="App">
      <header>
